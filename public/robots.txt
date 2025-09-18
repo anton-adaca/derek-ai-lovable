@@ -1,0 +1,3 @@
+// public/robots.txt
+// This is a placeholder for the actual public/robots.txt file
+// In a production export, this would contain the real source code
