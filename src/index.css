@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Derek.ai Design System - Professional SaaS for Mortgage Brokers
+All colors MUST be HSL for consistency with Tailwind configuration.
+*/
+
+@layer base {
+  :root {
+    /* Derek.ai Brand Colors */
+    --derek-navy: 210 75% 16%;        /* #0A1F44 - Navigation, Footer, Logo */
+    --derek-white: 0 0% 100%;         /* #FFFFFF - Body Background */
+    --derek-blue: 213 74% 58%;        /* #4A90E2 - CTAs, Primary Actions */
+    --derek-grey: 210 17% 96%;        /* #F5F5F7 - Dividers, Subtle Backgrounds */
+    --derek-charcoal: 0 0% 20%;       /* #333333 - Text Color */
+    
+    /* Semantic Token Mapping */
+    --background: var(--derek-white);
+    --foreground: var(--derek-charcoal);
+
+    --card: var(--derek-white);
+    --card-foreground: var(--derek-charcoal);
+
+    --popover: var(--derek-white);
+    --popover-foreground: var(--derek-charcoal);
+
+    --primary: var(--derek-blue);
+    --primary-foreground: var(--derek-white);
+
+    --secondary: var(--derek-grey);
+    --secondary-foreground: var(--derek-charcoal);
+
+    --muted: var(--derek-grey);
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: var(--derek-grey);
+    --accent-foreground: var(--derek-charcoal);
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: var(--derek-white);
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: var(--derek-blue);
+
+    --radius: 0.5rem;
+
+    /* Derek.ai Specific Design Tokens */
+    --derek-nav-bg: var(--derek-navy);
+    --derek-nav-text: var(--derek-white);
+    --derek-card-shadow: 0 2px 8px hsl(var(--derek-charcoal) / 0.08);
+    --derek-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Sidebar tokens for Derek.ai */
+    --sidebar-background: var(--derek-navy);
+    --sidebar-foreground: var(--derek-white);
+    --sidebar-primary: var(--derek-blue);
+    --sidebar-primary-foreground: var(--derek-white);
+    --sidebar-accent: hsl(var(--derek-navy) / 0.1);
+    --sidebar-accent-foreground: var(--derek-white);
+    --sidebar-border: hsl(var(--derek-white) / 0.1);
+    --sidebar-ring: var(--derek-blue);
+  }
+
+  .dark {
+    /* Derek.ai maintains consistent branding in dark mode */
+    --background: var(--derek-navy);
+    --foreground: var(--derek-white);
+
+    --card: var(--derek-navy);
+    --card-foreground: var(--derek-white);
+
+    --popover: var(--derek-navy);
+    --popover-foreground: var(--derek-white);
+
+    --primary: var(--derek-blue);
+    --primary-foreground: var(--derek-white);
+
+    --secondary: hsl(var(--derek-navy) / 0.8);
+    --secondary-foreground: var(--derek-white);
+
+    --muted: hsl(var(--derek-navy) / 0.6);
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: hsl(var(--derek-navy) / 0.8);
+    --accent-foreground: var(--derek-white);
+
+    --border: hsl(var(--derek-white) / 0.1);
+    --input: hsl(var(--derek-white) / 0.1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-montserrat;
+  }
+
+  /* Derek.ai Professional Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-montserrat font-bold text-foreground;
+  }
+
+  /* Derek.ai Card Styles */
+  .derek-card {
+    @apply bg-card border border-border rounded-lg;
+    box-shadow: var(--derek-card-shadow);
+  }
+
+  /* Derek.ai Transitions */
+  .derek-transition {
+    transition: var(--derek-transition);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
